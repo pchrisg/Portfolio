@@ -30,12 +30,8 @@ int main() {
 	catch (const char * e) {
 		cout << e;
 	}
-	try {
-		vec3[0]._id = 5;
-	}
-	catch (const char* e) {
-		cout << e;
-	}
+	
+	vec3[0]._id = 5;
 
 	cout << "V3:  Size: " << vec3.GetSize() << " Capacity: " << vec3.GetCapacity() << "\n";
 	cout << vec3.ToString();

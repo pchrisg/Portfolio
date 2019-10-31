@@ -1,9 +1,10 @@
 #include "MyVector.h"
 
 //Constructors, Operators and Destructor
-MyVector::MyVector(const int capacity) : _vectorSize(0)
+MyVector::MyVector() : MyVector(0) {}
+
+MyVector::MyVector(const int capacity) : _vectorSize(0), _vectorCapacity(capacity)
 {
-	_vectorCapacity = capacity;
 	_vectorObjects = new MyObject[_vectorCapacity]{};
 }
 

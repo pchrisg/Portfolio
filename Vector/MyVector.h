@@ -68,7 +68,7 @@ private: // 구현에 필요한 멤버 추가 함수/변수들을 자유롭게 �
 public: // 생성자, 복사생성자, 할당연산자, 소멸자를 .cpp 파일에 구현합니다.
  
     // Default Constructor.
-	MyVector() : MyVector(0) {};
+	MyVector();
 
 	//Perameterised Constructor.
     MyVector(const int capacity);
