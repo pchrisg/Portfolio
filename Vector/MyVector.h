@@ -70,7 +70,7 @@ public: // 생성자, 복사생성자, 할당연산자, 소멸자를 .cpp 파일
     // Default Constructor.
 	MyVector();
 
-	//Perameterised Constructor.
+    //Perameterised Constructor.
     MyVector(const int capacity);
  
     // Copy constructor.
