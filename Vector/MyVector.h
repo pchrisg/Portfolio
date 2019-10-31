@@ -59,16 +59,16 @@ class MyVector
 {
 private: // 구현에 필요한 멤버 추가 함수/변수들을 자유롭게 아래에 정의 합니다.
  
-	MyObject* _vectorObjects{};
-	unsigned int _vectorCapacity{};
-	unsigned int _vectorSize{};
+    MyObject* _vectorObjects{};
+    unsigned int _vectorCapacity{};
+    unsigned int _vectorSize{};
 
     void Grow();
  
 public: // 생성자, 복사생성자, 할당연산자, 소멸자를 .cpp 파일에 구현합니다.
  
     // Default Constructor.
-	MyVector();
+    MyVector();
 
     //Perameterised Constructor.
     MyVector(const int capacity);
@@ -79,8 +79,8 @@ public: // 생성자, 복사생성자, 할당연산자, 소멸자를 .cpp 파일
     // Assignment operator.
     void operator=(const MyVector& other);
 
-	// Returns the MyObject instance at the specified index.
-	MyObject& operator[](size_t index);
+    // Returns the MyObject instance at the specified index.
+    MyObject& operator[](size_t index);
  
     // Destructor.
     ~MyVector();
