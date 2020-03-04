@@ -1,15 +1,20 @@
+#include <iostream>
 #include "MyVector.h"
 
 //Constructors, Operators and Destructor
-MyVector::MyVector() : MyVector(0) {}
+MyVector::MyVector() : MyVector(0) { }
 
 MyVector::MyVector(const int capacity) : _vectorSize(0), _vectorCapacity(capacity)
 {
+	//std::cout << "Perameterised Constructor" << std::endl;
+
 	_vectorObjects = new MyObject[_vectorCapacity]{};
 }
 
 MyVector::MyVector(const MyVector& other)
 {
+	//std::cout << "Copy Constructor" << std::endl;
+
 	_vectorCapacity = other._vectorCapacity;
 	_vectorSize = other._vectorSize;
 
@@ -22,6 +27,8 @@ MyVector::MyVector(const MyVector& other)
 
 void MyVector::operator=(const MyVector& other)
 {
+	//std::cout << "Assignment Operator" << std::endl;
+
 	_vectorCapacity = other._vectorCapacity;
 	_vectorSize = other._vectorSize;
 
@@ -62,11 +69,12 @@ int MyVector::GetSize() const
 //Vector Functions
 void MyVector::Add(int id)
 {
+	std::cout << "Adding: " << id << std::endl;
 	if (_vectorSize == _vectorCapacity)
 		Grow();
 
 	_vectorObjects[_vectorSize]._id = id;
-	_vectorSize += 1;
+	_vectorSize++;
 }
 
 void MyVector::Grow()
@@ -95,7 +103,7 @@ void MyVector::TrimToSize()
 		_vectorObjects[i] = tempPtr[i];
 
 	delete[] tempPtr;
-}
+} 
 
 void MyVector::RemoveAll(int myObjectId)
 {

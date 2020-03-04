@@ -111,5 +111,7 @@ int main() {
 	}
 	delete[] groupVec;
 
+	getchar();
+
 	return 0;
 }
